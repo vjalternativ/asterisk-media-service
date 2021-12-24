@@ -8,6 +8,7 @@ import org.asteriskjava.manager.AuthenticationFailedException;
 import org.asteriskjava.manager.DefaultManagerConnection;
 import org.asteriskjava.manager.ManagerEventListener;
 import org.asteriskjava.manager.TimeoutException;
+import org.asteriskjava.manager.action.OriginateAction;
 import org.asteriskjava.manager.action.RedirectAction;
 import org.asteriskjava.manager.action.SetVarAction;
 import org.asteriskjava.manager.event.ManagerEvent;
@@ -57,4 +58,8 @@ public class AsteriskManager extends Thread implements ManagerEventListener {
 		managerConnection.sendAction(setvarAction);
 	}
 
+	public void sendOriginateAction(OriginateAction action)
+			throws IllegalArgumentException, IllegalStateException, IOException, TimeoutException {
+		managerConnection.sendAction(action);
+	}
 }
