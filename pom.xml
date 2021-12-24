@@ -18,4 +18,11 @@
 		</dependency>
   </dependencies>
   <packaging>jar</packaging> 
+  <distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>GitHub vjalternativ Asterisk Media Service</name>
+     <url>https://maven.pkg.github.com/vjalternativ/asterisk-media-service</url>
+   </repository>
+</distributionManagement>
 </project>
